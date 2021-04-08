@@ -287,3 +287,16 @@ header{
 .body-btn:hover::before{
     background-color: var(--body-font-color);
 }
+
+
+/* tasteful recipes */
+.tasteful-recipes{
+    background: url('images/tasteful-recipes.jpg') center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.between{
+    height: 65vh;
+}
