@@ -293,12 +293,12 @@ header{
 .tasteful-recipes{
     background: url('images/tasteful-recipes.jpg') center no-repeat;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .between{
     height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -311,4 +311,11 @@ header{
 
 .discover-our-menu .restaurent-description{
     padding: 3rem;
+}
+
+/* perfect blend */
+
+.perfect-blend{
+    background: url('images/perfect-blend.jpg') center no-repeat;
+    background-size: cover;
 }
