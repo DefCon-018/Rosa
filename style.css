@@ -22,8 +22,12 @@ html{
     scroll-behavior: smooth;
 }
 
+body{
+    overflow-x: hidden;
+}
 section{
     padding: 3.9rem 0;
+    overflow: hidden;
 }
 
 a{
@@ -96,6 +100,19 @@ header{
     justify-content: space-around;
 }
 
+
+.nav-item a{
+    font-size: 3rem;
+    color: white;
+    font-family: sans-serif;
+    transition: color border-bottom-color .5s;
+    border-bottom: 2px solid white;
+}
+.nav-item a:hover{
+    color: var(--secondary-font-color);
+    border-bottom-color: var(--secondary-font-color);
+}
+
 .nav::before{
     content: '';
     position: fixed;
@@ -146,6 +163,9 @@ header{
     font-weight: 300;
     line-height: 0.5;
     letter-spacing: 2px;
+    animation: fadeUp 0.5s forwards; 
+    animation-delay: 0.5s;
+    opacity: 0;
 }
 .first-letter{
     font-size: 10rem;
@@ -157,6 +177,9 @@ header{
     letter-spacing: 0.5rem;
     margin-right: -0.5rem;
     text-transform: uppercase;
+    animation: scale;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 
 .seperator{
@@ -196,6 +219,11 @@ header{
     margin: 0 1.6rem;
 }
 
+.single-animation{
+    opacity: 0;
+    animation: fadeDown 0.5s forwards;
+    animation-delay: 1.5s;
+}
 .headline-description h5{
     color: white;
     font-size: 1.6rem;
@@ -340,6 +368,7 @@ footer{
 .back-to-top i{
     font-size: 2rem;
     color: white;
+    animation: topBottom 1s infinite;
 }
 
 .footer-content h4{
@@ -351,6 +380,9 @@ footer{
     margin-bottom: 2rem;
 }
 
+.footer-content{
+    overflow: hidden;
+}
 .footer-content-about{
     margin: 2rem;
 }
@@ -434,6 +466,7 @@ footer{
         color: white;
         font-size: 1.6rem;
         font-family: sans-serif;
+        border-bottom: none;
     }
     .sub-heading{
         font-size: 10rem;
@@ -481,5 +514,58 @@ footer{
         max-width: 27.5rem;
         width: 100%;
         margin: 5rem 1rem;
+    }
+}
+
+/* animations */
+
+@keyframes fadeUp{
+    0%{
+        transform: translateY(4rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
+@keyframes scale{
+    0%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes topBottom{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-1rem);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeDown{
+    0%{
+        transform: translateY(-3rem);
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes lineFade{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
     }
 }
